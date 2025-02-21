@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>金聚德 Jin Ju De | Authentic Chinese Cuisine</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/JIN JU DE.png" alt="Jin Ju De Logo" class="logo-img">
+      <span class="chinese" lang="zh">金聚德</span>
+      <span class="english" style="font-family: 'Cinzel', serif; font-size: 20px; color: black; margin-left: 8px; text-transform: uppercase; letter-spacing: 1px;">JIN JU DE</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">首页 Home</a>
+      <a href="menu.html">菜单 Menu</a>
+      <a href="about.html">关于我们 About</a>
+      <a href="reservations.html">预订 Reservations</a>
+      <a href="contact.html">联系我们 Contact</a>
+      <a href="gallery.html">图库 Gallery</a>
+    </div>
+    <div class="nav-icons">
+      <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+      <a href="contact.html" class="order-btn">在线订餐 Order Online</a>
+    </div>
+  </nav>
+
+  <header class="hero about-hero">
+    <a href="#" class="hero-upload">
+      <img src="images/bgmie.webp" alt="About Hero" class="hero-bg">
+      <div class="hero-content">
+        <h1 lang="zh">JIN JU DE  金聚德</h1>
+        <p class="tagline">Experience authentic Chinese cuisine in an elegant setting</p>
+      </div>
+    </a>
+  </header>
+
+  <section class="featured">
+    <h2><i class="fas fa-star"></i> <span lang="zh">我们的招牌菜</span> Our Signature Dishes</h2>
+    <div class="dishes">
+      <div class="dish">
+        <div class="dish-img">
+          <img src="images/pek.jpg" alt="Peking Duck" class="dish-image">
+        </div>
+        <h3><span lang="zh">北京烤鸭</span> <span>Peking Duck</span></h3>
+        <p>Our world-famous duck, served with traditional pancakes and hoisin sauce</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img">
+          <img src="images/dimserv.jpg" alt="Dim Sum" class="dish-image">
+        </div>
+        <h3><span lang="zh">点心</span> <span>Dim Sum</span></h3>
+        <p>Handcrafted dumplings and small plates served daily</p>
+      </div>
+      <div class="dish">
+        <div class="dish-img">
+          <img src="images/bgg.jpg" alt="Mapo Tofu" class="dish-image">
+        </div>
+        <h3><span lang="zh">麻婆豆腐</span> <span>Mapo Tofu</span></h3>
+        <p>Spicy Sichuan tofu with minced pork in a rich sauce</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .dish-img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .dish-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid gold; /* removed # for valid CSS */
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .dish-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        border-color: darkgoldenrod; /* removed # for valid CSS */
+    }
+
+    .dishes {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .dish {
+        text-align: center;
+        max-width: 250px;
+    }
+  </style>
+
+  <section class="info">
+    <div class="hours">
+      <h3><i class="far fa-clock"></i> <span lang="zh">营业时间</span> Hours</h3>
+      <p>周一至周四 Monday - Thursday: 10:30 AM - 10:00 PM</p>
+      <p>周五至周六 Friday - Saturday: 11:00 AM - 11:00 PM</p>
+      <p>周日 Sunday: 10:00 AM - 9:30 PM</p>
+    </div>
+    <div class="location">
+      <h3><i class="fas fa-map-marker-alt"></i> <span lang="zh">地址</span> Location</h3>
+      <p>Next Gen Mall</p>
+      <p>Mombasa Road, Nairobi 00100</p>
+      <p><a href="tel:+254708924909">(+254)708924909</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="chinese" lang="zh">金聚德</span>
+        <span class="english">JIN JU DE</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">首页 Home</a>
+        <a href="menu.html"> 菜单Menu</a>
+        <a href="about.html"> 关于我们About</a>
+        <a href="gallery.html"> 图库Gallery</a>
+        <a href="reservations.html"> 预订Reservations</a>
+        <a href="contact.html"> 联系Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jinjude_?igsh=MXI3ZTN1N2J1NGI4Ng==" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.wechat.com/" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
+        <a href="https://www.instagram.com/jinjude_?igsh=MXI3ZTN1N2J1NGI4Ng==" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2023 Jin Ju De. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="popup-overlay"></div>
+  <div class="popup" id="reservation-popup">
+    <button class="popup-close" aria-label="Close">×</button>
+    <div class="popup-content">
+      <h3><span lang="zh">预订座位</span> Reserve a Table</h3>
+      <p lang="zh">为了更好的服务和快速回应，请致电：</p>
+      <p>For better service and quick response, please call:</p>
+      <p><a href="tel:+254795665527"><i class="fas fa-phone"></i> (+254) 95665527</a></p>
+    </div>
+  </div>
+
+  <script src="animations.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const reservationButtons = document.querySelectorAll('a[href="reservations.html"]');
+      // Remove the popup handler from the navigation links to allow normal navigation
+    });
+  </script>
+</body>
+</html>

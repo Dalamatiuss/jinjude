@@ -1,0 +1,395 @@
+/* Define Chinese-inspired color variables */
+:root {
+  --primary-color: #d62828; /* Vibrant Chinese Red */
+  --secondary-color: #f4a261; /* Warm Gold-Orange */
+  --text-color: #2d1b0f; /* Deep Brown-Black */
+  --light-text: #ffcd38; /* Imperial Yellow */
+  --background: #fce8e8; /* Soft Pink-Red */
+  --dark-background: #1f2521; /* Jade-Tinged Black */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* Default font, replaceable */
+}
+
+/* Body */
+body {
+  background: var(--background);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Hero/About Hero Header */
+.hero,
+.about-hero {
+  position: relative;
+  height: 60vh; /* Default height */
+  margin-top: 60px; /* Offset for fixed nav */
+  overflow: hidden;
+}
+
+.hero-upload {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6); /* Darken image for text contrast */
+}
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  text-align: center;
+  width: 100%;
+  z-index: 1; /* Ensure it’s above the background */
+  color: var(--light-text); /* Yellow text for contrast */
+  padding: 10rem; /* Ensure padding doesn’t push text off-screen on small devices */
+}
+
+/* H1 Styling (English and Chinese) */
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 0;
+  font-family: 'Cinzel', serif; /* Elegant font for English */
+  text-shadow: 2px 2px 4px var(--dark-background);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeBounceIn 1.5s ease-out 0.5s forwards; /* Bounce animation */
+  white-space: normal; /* Allow text to wrap if needed */
+}
+
+.hero-content h1 .chinese {
+  display: block; /* Stack Chinese above English */
+  font-size: 24px;
+  font-family: 'Noto Sans SC', sans-serif; /* Chinese font */
+  margin-bottom: 5px;
+}
+
+/* Fade-in with Bounce Animation */
+@keyframes fadeBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .hero,
+  .about-hero {
+    height: 40vh; /* Smaller height on mobile for better fit */
+  }
+
+  .hero-content {
+    padding: 2rem; /* Reduce padding on mobile to prevent overflow */
+  }
+
+  .hero-content h1 {
+    font-size: 24px; /* Reduced size for mobile */
+    line-height: 1.2; /* Better line spacing for readability */
+  }
+
+  .hero-content h1 .chinese {
+    font-size: 18px; /* Reduced Chinese text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero,
+  .about-hero {
+    height: 30vh; /* Even smaller on very small screens */
+  }
+
+  .hero-content {
+    padding: 1rem; /* Further reduce padding for very small screens */
+  }
+
+  .hero-content h1 {
+    font-size: 18px; /* Further reduced for very small screens */
+  }
+
+  .hero-content h1 .chinese {
+    font-size: 14px; /* Further reduced Chinese text */
+  }
+}
+
+/* About Hero Section (ensure consistency) */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px; /* Offset for fixed nav */
+  overflow: hidden;
+  background: url('https://via.placeholder.com/1920x1080?text=About+Hero') no-repeat center/cover; /* Placeholder */
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+  z-index: -1; /* Ensure it’s below text */
+}
+
+/* History Section */
+.history {
+  padding: 4rem 2rem;
+  background: var(--background);
+}
+
+.history .content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.history .content h2 {
+  font-size: 36px;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Cinzel', serif; /* Consistent font for headings */
+}
+
+.history .content p {
+  font-size: 16px;
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif; /* Consistent font for body text */
+}
+
+/* Chef Grid */
+.chef-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.chef {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chef:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chef-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  background: #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.chef-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chef h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif; /* Consistent font for headings */
+}
+
+.chef p {
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif; /* Consistent font for body text */
+}
+
+/* Values Section */
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.value {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.value i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.value h3 {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif; /* Consistent font for headings */
+}
+
+.value p {
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif; /* Consistent font for body text */
+}
+
+/* Awards Grid */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.award {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.award i {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.award h3 {
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-family: 'Cinzel', serif; /* Consistent font for headings */
+}
+
+.award p {
+  font-size: 14px;
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif; /* Consistent font for body text */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .hero,
+  .about-hero {
+    height: 40vh; /* Smaller height on mobile for better fit */
+  }
+
+  .hero-content {
+    padding: 2rem; /* Reduce padding to prevent overflow on mobile */
+  }
+
+  .about-hero h1 {
+    font-size: 32px;
+  }
+
+  .history {
+    padding: 2rem 1rem;
+  }
+
+  .history .content h2 {
+    font-size: 28px;
+  }
+
+  .chef-grid,
+  .awards-grid {
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .values {
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero,
+  .about-hero {
+    height: 30vh; /* Even smaller on very small screens */
+  }
+
+  .hero-content {
+    padding: 1rem; /* Further reduce padding for very small screens */
+  }
+
+  .about-hero h1 {
+    font-size: 24px;
+  }
+
+  .history .content h2 {
+    font-size: 22px;
+  }
+
+  .chef h3,
+  .award h3 {
+    font-size: 16px;
+  }
+
+  .chef p,
+  .award p,
+  .value h3,
+  .value p {
+    font-size: 12px;
+  }
+}

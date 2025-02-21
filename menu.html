@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | 金聚德 Jin Ju De</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="menu.css">
+
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="images/JIN JU DE.png" alt="Jin Ju De Logo" class="logo-img">
+      <span class="chinese" lang="zh">金聚德</span>
+      <span class="english" style="font-family: 'Cinzel', serif; font-size: 20px; color: black; margin-left: 8px; text-transform: uppercase; letter-spacing: 1px;">JIN JU DE</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">首页 Home</a>
+      <a href="menu.html">菜单 Menu</a>
+      <a href="about.html">关于我们 About</a>
+      <a href="reservations.html">预订 Reservations</a>
+      <a href="contact.html">联系我们 Contact</a>
+      <a href="gallery.html">图库 Gallery</a>
+    </div>
+    <div class="nav-icons">
+      <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+      <a href="contact.html" class="order-btn">在线订餐 Order Online</a>
+    </div>
+  </nav>
+
+  <div class="menu-header">
+    <h1>菜单 Our Menu</h1>
+    <div class="menu-categories">
+      <button class="category-btn active" data-category="appetizers">前菜 Appetizers</button>
+      <button class="category-btn" data-category="soups">汤类 Soups</button>
+      <button class="category-btn" data-category="dim-sum">点心 Dim Sum</button>
+      <button class="category-btn" data-category="main-courses">主菜 Main Courses</button>
+      <button class="category-btn" data-category="specialties">特色菜 House Specialties</button>
+      <button class="category-btn" data-category="desserts">甜点 Desserts</button>
+    </div>
+  </div>
+
+  <section class="menu-section active" id="appetizers">
+    <h2>前菜 Appetizers</h2>
+    <div class="menu-items">
+      <div class="menu-item" data-item-id="spring-rolls">
+        <div class="menu-item-image">
+          <img src="images/springrolls.jpg" alt="Spring Rolls" class="menu-photo">
+          <label for="spring-rolls-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="spring-rolls-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>春卷 <span>Spring Rolls</span></h3>
+        <p>Crispy rolls filled with vegetables and mushrooms</p>
+        <span class="price">$6.95</span>
+      </div>
+      <div class="menu-item" data-item-id="cucumber-salad">
+        <div class="menu-item-image">
+          <img src="images/cucumber.jpg" alt="Cucumber Salad" class="menu-photo">
+          <label for="cucumber-salad-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="cucumber-salad-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>凉拌黄瓜 <span>Cucumber Salad</span></h3>
+        <p>Marinated cucumber with garlic and vinegar</p>
+        <span class="price">$5.95</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="soups">
+    <h2>汤类 Soups</h2>
+    <div class="menu-items">
+      <div class="menu-item" data-item-id="hot-and-sour-soup">
+        <div class="menu-item-image">
+          <img src="images/soup1.jpg" alt="Hot and Sour Soup" class="menu-photo">
+          <label for="hot-and-sour-soup-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="hot-and-sour-soup-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>酸辣汤 <span>Hot and Sour Soup</span></h3>
+        <p>Classic spicy and sour soup with tofu and mushrooms</p>
+        <span class="price">$4.95</span>
+      </div>
+      <div class="menu-item" data-item-id="sweet-corn-soup">
+        <div class="menu-item-image">
+          <img src="images/soup2.jpg" alt="Sweet Corn Soup" class="menu-photo">
+          <label for="sweet-corn-soup-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="sweet-corn-soup-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>玉米汤 <span>Sweet Corn Soup</span></h3>
+        <p>Creamy corn soup with chicken</p>
+        <span class="price">$4.95</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="dim-sum">
+    <h2>点心 Dim Sum</h2>
+    <div class="menu-items">
+      <div class="menu-item" data-item-id="har-gow">
+        <div class="menu-item-image">
+          <img src="images/hargow.jpg" alt="Har Gow" class="menu-photo">
+          <label for="har-gow-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="har-gow-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>虾饺 <span>Har Gow</span></h3>
+        <p>Shrimp dumplings in translucent wrapper</p>
+        <span class="price">$6.95</span>
+      </div>
+      <div class="menu-item" data-item-id="siu-mai">
+        <div class="menu-item-image">
+          <img src="images/siu.jpg" alt="Siu Mai" class="menu-photo">
+          <label for="siu-mai-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="siu-mai-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>烧卖 <span>Siu Mai</span></h3>
+        <p>Open-topped dumplings with pork and shrimp</p>
+        <span class="price">$6.95</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="main-courses">
+    <h2>主菜 Main Courses</h2>
+    <div class="menu-items">
+      <div class="menu-item" data-item-id="kung-pao-chicken">
+        <div class="menu-item-image">
+          <img src="images/kungpao.jpg" alt="Kung Pao Chicken" class="menu-photo">
+          <label for="kung-pao-chicken-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="kung-pao-chicken-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>宫保鸡丁 <span>Kung Pao Chicken</span></h3>
+        <p>Diced chicken with peanuts and dried chilies</p>
+        <span class="price">$15.95</span>
+      </div>
+      <div class="menu-item" data-item-id="sizzling-beef">
+        <div class="menu-item-image">
+          <img src="images/sizzling.avif" alt="Sizzling Beef" class="menu-photo">
+          <label for="sizzling-beef-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="sizzling-beef-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>铁板牛肉 <span>Sizzling Beef</span></h3>
+        <p>Tender beef in black pepper sauce</p>
+        <span class="price">$18.95</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="specialties">
+    <h2>特色菜 House Specialties</h2>
+    <div class="menu-items">
+      <div class="menu-item featured" data-item-id="peking-duck">
+        <div class="menu-item-image">
+          <img src="images/pekingduk.jpg" alt="Peking Duck" class="menu-photo">
+          <label for="peking-duck-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="peking-duck-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>北京烤鸭 <span>Peking Duck</span></h3>
+        <p>Whole duck served with pancakes, scallions, and hoisin sauce</p>
+        <span class="price">$45.95</span>
+      </div>
+      <div class="menu-item" data-item-id="steamed-fish">
+        <div class="menu-item-image">
+          <img src="images/stfish.jpg" alt="Steamed Fish" class="menu-photo">
+          <label for="steamed-fish-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="steamed-fish-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>清蒸鱼 <span>Steamed Fish</span></h3>
+        <p>Fresh whole fish with ginger and scallions</p>
+        <span class="price">$26.5</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu-section" id="desserts">
+    <h2>甜点 Desserts</h2>
+    <div class="menu-items">
+      <div class="menu-item" data-item-id="mango-pudding">
+        <div class="menu-item-image">
+          <img src="images/mango.jpg" alt="Mango Pudding" class="menu-photo">
+          <label for="mango-pudding-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="mango-pudding-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>芒果布丁 <span>Mango Pudding</span></h3>
+        <p>Fresh mango pudding with cream</p>
+        <span class="price">$6.95</span>
+      </div>
+      <div class="menu-item" data-item-id="fried-bananas">
+        <div class="menu-item-image">
+          <img src="images/banans.jpg" alt="Fried Bananas" class="menu-photo">
+          <label for="fried-bananas-upload" class="upload-label">
+            <i class="fas fa-camera"></i>
+            <span>Update Photo</span>
+          </label>
+          <input type="file" id="fried-bananas-upload" class="photo-upload" accept="image/*">
+        </div>
+        <h3>炸香蕉 <span>Fried Bananas</span></h3>
+        <p>Crispy banana fritters with honey</p>
+        <span class="price">$6.95</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="chinese">金聚德</span>
+        <span class="english">JIN JU DE</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">首页 Home</a>
+        <a href="menu.html"> 菜单Menu</a>
+        <a href="about.html"> 关于我们About</a>
+        <a href="gallery.html"> 图库Gallery</a>
+        <a href="reservations.html"> 预订Reservations</a>
+        <a href="contact.html"> 联系Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/jinjude_?igsh=MXI3ZTN1N2J1NGI4Ng=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.wechat.com/"><i class="fab fa-weixin"></i></a>
+        <a href="https://www.instagram.com/jinjude_?igsh=MXI3ZTN1N2J1NGI4Ng=="><i class="fab fa-yelp"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      2023 Jin Ju De. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>

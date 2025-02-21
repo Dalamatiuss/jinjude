@@ -1,0 +1,144 @@
+/* Reservations Form */
+.reservations-form {
+  max-width: 600px; /* Maintain compact width */
+  margin: 2rem auto; /* Center the form */
+  padding: 1.5rem; /* Keep padding reasonable */
+  background: linear-gradient(135deg, var(--background), var(--secondary-color)); /* Gradient for interest (pink-red to gold-orange) */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid var(--primary-color); /* Red border for contrast */
+}
+
+.reservations-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Maintain gap between elements */
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller min-width */
+  gap: 1rem; /* Maintain gap between grid items */
+}
+
+.form-group {
+  margin-bottom: 0.5rem; /* Keep margin small */
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px; /* Maintain readable font size */
+  color: var(--light-text); /* Bright yellow for high visibility */
+  margin-bottom: 0.25rem; /* Keep margin below labels small */
+  font-family: 'Cinzel', serif; /* Elegant font for labels */
+  text-shadow: 1px 1px 2px var(--dark-background); /* Shadow for depth */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem; /* Keep padding compact */
+  font-size: 14px; /* Maintain readable font size */
+  border: 2px solid var(--primary-color); /* Bold red border for contrast */
+  border-radius: 4px; /* Small radius for compactness */
+  background: rgba(255, 0, 179, 0.55); /* White background for readability */
+  font-family: 'Arial', sans-serif; /* Clean font for inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--secondary-color); /* Gold-orange on focus for visual interest */
+  outline: none;
+  box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.form-group textarea {
+  height: 80px; /* Maintain compact height for textarea */
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+.submit-btn {
+  padding: 0.75rem 1.5rem; /* Keep padding reasonable */
+  background: var(--primary-color); /* Vibrant red for button */
+  color: var(--light-text); /* Bright yellow text for visibility */
+  border: none;
+  border-radius: 25px; /* Soft, elegant curve */
+  font-size: 16px; /* Maintain readable font size */
+  font-weight: 500;
+  font-family: 'Cinzel', serif; /* Matches heading font */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for visibility */
+}
+
+.submit-btn:hover {
+  background: var(--secondary-color); /* Gold-orange on hover for interest */
+  color: var(--dark-background); /* Dark jade for contrast */
+  transform: translateY(-2px); /* Slight lift for interactivity */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .reservations-form {
+    max-width: 400px; /* Reduce width on mobile */
+    margin: 1.5rem auto;
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+    gap: 0.75rem; /* Reduce gap */
+  }
+
+  .form-group label {
+    font-size: 12px; /* Smaller labels on mobile */
+    text-shadow: 0.5px 0.5px 1px var(--dark-background); /* Lighter shadow for smaller text */
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 12px; /* Smaller inputs on mobile */
+    padding: 0.4rem; /* Reduce padding */
+    border: 1px solid var(--primary-color); /* Slightly thinner border */
+  }
+
+  .submit-btn {
+    padding: 0.6rem 1.2rem; /* Reduce button padding */
+    font-size: 14px; /* Smaller button text */
+  }
+}
+
+@media (max-width: 480px) {
+  .reservations-form {
+    max-width: 300px; /* Even smaller on very small screens */
+    padding: 0.8rem; /* Further reduce padding */
+  }
+
+  .form-group label {
+    font-size: 10px; /* Even smaller labels */
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 10px; /* Even smaller inputs */
+    padding: 0.3rem; /* Further reduce padding */
+  }
+
+  .submit-btn {
+    padding: 0.5rem 1rem; /* Further reduce button padding */
+    font-size: 12px; /* Even smaller button text */
+  }
+}
