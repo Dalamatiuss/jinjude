@@ -1,0 +1,240 @@
+/* Contact page specific styles */
+.contact-hero {
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.contact-content {
+  padding: 0rem 0rem; 
+  background: var(--background);
+}
+
+.contact-info-full {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info-full h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem; 
+  color: var(--primary-color);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; 
+  margin-bottom: 2rem; 
+}
+
+.info-group {
+  background: white;
+  padding: 1.5rem; 
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.info-group h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.25rem; 
+}
+
+.info-group p {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem; 
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.info-group a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-group a:hover {
+  color: var(--primary-color);
+}
+
+/* Map section styles */
+.map-section {
+  padding: 2rem; 
+  background: var(--dark-background);
+  margin-top: 1rem; 
+  margin-bottom: 2rem;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-container h2 {
+  font-size: 2rem;
+  color: var(--light-text);
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.map-container h2 span {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+.map {
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-content {
+    padding: 2rem 1rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .info-group {
+    padding: 1.25rem;
+  }
+  
+  .map-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    height: 30vh;
+  }
+  
+  .contact-info-full h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .info-group h3 {
+    font-size: 1.1rem;
+  }
+
+  .info-group p {
+    font-size: 0.85rem;
+  }
+  
+  .map-container h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-content {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  .contact-info-full h2 {
+    font-size: 1.5rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .info-group {
+    padding: 1rem;
+  }
+  
+  .info-group h3 {
+    font-size: 1rem;
+  }
+  
+  .info-group p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .map-section {
+    padding: 1.5rem 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  .map-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .map {
+    height: 300px;
+  }
+
+  .social-info .social-links {
+    gap: 1rem;
+  }
+
+  .social-info .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
+/* Fix for hours text wrapping */
+.info-group:nth-child(3) p {
+  white-space: normal;
+  word-break: break-word;
+  font-size: 0.85rem;
+}
+
+/* Ensure social icons stay in line */
+.social-info .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.social-info .social-links a {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-info .social-links a:hover {
+  transform: scale(1.1);
+  color: var(--secondary-color);
+}
+
+/* Additional spacing fixes */
+.info-group h3 i {
+  min-width: 20px;
+}
