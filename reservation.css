@@ -89,56 +89,53 @@
 }
 
 /* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .reservations-form {
-    max-width: 400px; /* Reduce width on mobile */
-    margin: 1.5rem auto;
-    padding: 1rem; /* Reduce padding */
+    max-width: 700px;
+    padding: 1.5rem;
   }
 
   .form-grid {
-    grid-template-columns: 1fr; /* Stack columns on mobile */
-    gap: 0.75rem; /* Reduce gap */
-  }
-
-  .form-group label {
-    font-size: 12px; /* Smaller labels on mobile */
-    text-shadow: 0.5px 0.5px 1px var(--dark-background); /* Lighter shadow for smaller text */
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 12px; /* Smaller inputs on mobile */
-    padding: 0.4rem; /* Reduce padding */
-    border: 1px solid var(--primary-color); /* Slightly thinner border */
-  }
-
-  .submit-btn {
-    padding: 0.6rem 1.2rem; /* Reduce button padding */
-    font-size: 14px; /* Smaller button text */
+    gap: 1.5rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .reservations-form {
-    max-width: 300px; /* Even smaller on very small screens */
-    padding: 0.8rem; /* Further reduce padding */
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .form-group label {
-    font-size: 10px; /* Even smaller labels */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .reservations-form {
+    max-width: 100%;
+    margin: 1.5rem 1rem;
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    font-size: 10px; /* Even smaller inputs */
-    padding: 0.3rem; /* Further reduce padding */
+    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 
   .submit-btn {
-    padding: 0.5rem 1rem; /* Further reduce button padding */
-    font-size: 12px; /* Even smaller button text */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 }
