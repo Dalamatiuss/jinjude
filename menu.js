@@ -35,14 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <a href="tel:+254795665527"><i class="fas fa-phone"></i></a>
       <a href="contact.html" class="order-btn">在线订餐 Order Online</a>
     </div>
-    <div class="footer-links">
-      <a href="index.html">首页 Home</a>
-      <a href="menu.html">菜单 Menu</a>
-      <a href="about.html">关于我们 About</a>
-      <a href="gallery.html">图库 Gallery</a>
-      <a href="reservations.html">预订 Reservations</a>
-      <a href="contact.html">联系 Contact</a>
-    </div>
+
   `;
   
   navMenu.innerHTML = mobileMenuContent;
